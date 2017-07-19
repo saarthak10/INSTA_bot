@@ -12,7 +12,7 @@ def post_comment(user_name):
         print("Your comment is added")
     else:
         print("Unable to post comment,try again")
-post_comment('sharma_abhi07')
+
 
 
 
