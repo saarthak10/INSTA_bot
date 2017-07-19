@@ -9,7 +9,7 @@ def analysing_trends():
     for i in range(0,5):
         text = raw_input("Enter the name for the caption you need the data ")
         list_of_tags.append(text)
-        print list_of_tags
+
 #using get request to get the response
     for j in range(len(list_of_tags)):
 
@@ -55,6 +55,5 @@ def analysing_trends():
     plt.ylabel("no of posts")
     plt.xlabel("Tags")
     plt.show()
-analysing_trends()
 
 
