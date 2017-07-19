@@ -56,8 +56,8 @@ def user_media(user_name):
                                     post_id = response['data'][number - 1]['id']
                         number = number + 1
 
-                    image_name = response['data'][0]['id']+ '.jpeg'
-                    image_url = response['data'][0]['images']['standard_resolution']['url']
+                    image_name = post_id + '.jpeg'
+                    image_url = response['data'][number - 1]['images']['standard_resolution']['url']
                     urllib.urlretrieve(image_url, image_name)
                     print("user's post downloaded")
                     return post_id
@@ -68,8 +68,8 @@ def user_media(user_name):
                         if response['data'][number - 1]['likes']['count'] >= response['data'][number]['likes']['count']:
                                     post_id = response['data'][number - 1]['id']
                         number = number + 1
-                    image_name = response['data'][0]['id'] + '.jpeg'
-                    image_url = response['data'][0]['images']['standard_resolution']['url']
+                    image_name = response['data'][number - 1]['id'] + '.jpeg'
+                    image_url = response['data'][number - 1]['images']['standard_resolution']['url']
                     urllib.urlretrieve(image_url, image_name)
                     print("user's post downloaded")
                     return post_id
@@ -89,4 +89,4 @@ def user_media(user_name):
             print("post does not exist")
     else:
         print("status code other than 200 received")
-user_media('sharmaabhi07')
+
