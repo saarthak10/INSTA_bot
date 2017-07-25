@@ -8,6 +8,7 @@ def get_user_id(user_name):
 
     if info['meta']['code'] == 200:
         if len(info['data']):
+                print(info['data'][0]['id'])
                 return info['data'][0]['id']
         else:
             return None
